@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contact & Reports</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(#05345a, #086a8c, #0fb4c9);
+    color: #e8faff;
+    overflow-x: hidden;
+  }
+
+  /* --- CSS-ONLY FLOATING BUBBLES --- */
+  .bubbles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .bubble {
+    position: absolute;
+    bottom: -120px;
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+    animation: rise 12s infinite ease-in;
+    filter: blur(1px);
+  }
+
+  /* Animation */
+  @keyframes rise {
+    0%   { transform: translateY(0) scale(1); opacity: 0.7; }
+    100% { transform: translateY(-1200px) scale(1.4); opacity: 0; }
+  }
+
+  /* Random bubble positions */
+  .bubble:nth-child(1) { left: 10%; width: 25px; height: 25px; animation-duration: 10s; }
+  .bubble:nth-child(2) { left: 25%; width: 35px; height: 35px; animation-duration: 13s; }
+  .bubble:nth-child(3) { left: 40%; width: 20px; height: 20px; animation-duration: 9s; }
+  .bubble:nth-child(4) { left: 55%; width: 30px; height: 30px; animation-duration: 15s; }
+  .bubble:nth-child(5) { left: 70%; width: 45px; height: 45px; animation-duration: 11s; }
+  .bubble:nth-child(6) { left: 85%; width: 28px; height: 28px; animation-duration: 14s; }
+
+  /* HEADER */
+  .site-header {
+    background: rgba(0, 40, 70, 0.6);
+    backdrop-filter: blur(6px);
+    padding: 18px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  }
+
+  .site-header .container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .brand {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #b7eaff;
+    text-shadow: 0 0 10px rgba(0,150,255,0.7);
+  }
+
+  nav a {
+    margin-left: 15px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #d6f6ff;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  nav a:hover {
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 0 10px #7fdcff;
+  }
+
+  .container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 25px 0;
+  }
+
+  h2 {
+    text-align: center;
+    color: #d9faff;
+    margin-bottom: 10px;
+    text-shadow: 0 0 8px rgba(0,180,255,0.5);
+  }
+
+  p { text-align: center; margin-bottom: 25px; }
+
+  form {
+    background: rgba(255,255,255,0.15);
+    padding: 20px;
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.3);
+    margin-bottom: 30px;
+  }
+
+  form label { display: block; margin: 10px 0 5px; }
+
+  form input, form textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.2);
+    color: #eafdff;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    background: #0ea6e9;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .btn:hover {
+    background: #33c4ff;
+    box-shadow: 0 0 12px #33c4ff;
+  }
+
+  #reportsList .card {
+    background: rgba(255,255,255,0.17);
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  }
+
+  footer {
+    text-align: center;
+    padding: 15px;
+    margin-top: 40px;
+    background: rgba(0,40,70,0.5);
+    backdrop-filter: blur(6px);
+    color: #cfefff;
+  }
+</style>
+
+</head>
+<body>
+
+<div class="bubbles">
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="brand">BlueGuard Marine Watch</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Marine Sites</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <h2>Contact & Volunteer Reports</h2>
+  <p>Submit a marine sighting, issue, or community conservation report.</p>
+
+  <form id="reportForm">
+    <label>Name</label>
+    <input type="text" id="rname" required>
+
+    <label>Email</label>
+    <input type="email" id="remail" required>
+
+    <label>Message</label>
+    <textarea id="rmessage" rows="4" required></textarea>
+
+    <button class="btn" type="submit">Submit Report</button>
+  </form>
+
+  <h3>Your Saved Reports</h3>
+  <div id="reportsList"></div>
+
+</main>
+
+<footer>
+  <small>BlueGuard Marine Watch — SDG 14: Life Below Water</small>
+</footer>
+
+<script src="js/main.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    if (typeof initContactPage === "function") initContactPage();
+  });
+</script>
+
+</body>
+</html>

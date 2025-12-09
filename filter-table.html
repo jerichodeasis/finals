@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marine Table & Photos</title>
+
+  <!-- 🌊 CLEAN & COOL OCEAN-THEMED INTERNAL CSS -->
+  <style>
+
+    /* Background */
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(180deg, #08304b, #0a5f7f, #1590c4);
+      color: #e8f7ff;
+    }
+
+    /* TOP NAVIGATION BUTTONS */
+    .top-nav {
+      text-align: center;
+      padding: 12px 0;
+      background: rgba(0, 40, 73, 0.75);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .top-nav a {
+      color: #bfeaff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .top-nav a:hover {
+      background: rgba(255,255,255,0.15);
+      color: white;
+      box-shadow: 0 0 8px rgba(255,255,255,0.4);
+    }
+
+    /* Header title */
+    .site-header {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #bfeaff;
+      padding: 20px 0 5px;
+      text-shadow: 0 0 10px rgba(0,150,255,0.7);
+    }
+
+    /* Layout container */
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding-bottom: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #bfeaff;
+      text-shadow: 0 0 10px rgba(0,150,255,0.6);
+      margin-bottom: 20px;
+    }
+
+    /* Card Sections */
+    .section {
+      background: rgba(255,255,255,0.12);
+      padding: 18px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+    .section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0,150,255,0.35);
+    }
+.image-box {
+  width: 100%;
+  max-width: 800px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 12px;
+  border: 2px solid rgba(255,255,255,0.3);
+  display: block;
+}
+
+
+
+    /* Table */
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      color: #e8f7ff;
+    }
+    .info-table th,
+    .info-table td {
+      padding: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .info-table th {
+      width: 30%;
+      color: #bfeaff;
+      font-weight: bold;
+    }
+
+    /* Back button */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #1aa3ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: 0.3s;
+      box-shadow: 0 0 8px rgba(0,150,255,0.6);
+    }
+    .btn:hover {
+      background: #4ec8ff;
+      box-shadow: 0 0 14px rgba(0,150,255,0.9);
+    }
+	.video-box {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 14px;
+  margin: 20px 0;
+  border: 2px solid rgba(255,255,255,0.3);
+  display: block;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+  </style>
+</head>
+
+<body>
+
+<div class="top-nav">
+  <a href="index.html">Home</a>
+  <a href="destinations.html">Marine Sites</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<header class="site-header">Marine Table & Photos</header>
+
+<main class="container">
+
+  <h2>Marine Site Details</h2>
+
+  <div class="section">
+  <video class="video-box" controls>
+  <source src="video/CoralBay.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+    <h3>Coral Bay Reef</h3>
+    <img src="images/CoralBleaching.png" class="image-box">
+    <table class="info-table">
+      <tr><th>Threat</th><td>Coral Bleaching</td></tr>
+      <tr><th>Protected</th><td>Yes</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+  <video class="video-box" controls>
+  <source src="video/Harborcleanup.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+    <h3>Harbor Cleanup Zone</h3>
+    <img src="images/HarborCleanupZone.png"class="image-box">
+    <table class="info-table">
+      <tr><th>Threat</th><td>Pollution</td></tr>
+      <tr><th>Protected</th><td>No</td></tr>
+    </table>
+  </div>
+
+  <a class="btn" href="index.html">← Back to Home</a>
+
+</main>
+
+</body>
+</html>

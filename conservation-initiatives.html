@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Conservation Initiatives — BlueGuard Marine Watch</title>
+
+  <!-- OCEAN-THEMED INTERNAL CSS -->
+  <style>
+    :root {
+      --ocean-dark: #003f66;
+      --ocean-mid: #0077b6;
+      --ocean-light: #90e0ef;
+      --ocean-soft: #caf0f8;
+      --text-dark: #022b42;
+      --shadow: rgba(0,0,0,0.15);
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #0077b6, #00b4d8, #90e0ef, #caf0f8);
+      background-attachment: fixed;
+      color: var(--text-dark);
+      overflow-x: hidden;
+      scroll-behavior: smooth; /* Smooth scroll */
+    }
+
+    /* Animated waves */
+    body::before, body::after {
+      content: "";
+      position: fixed;
+      left: 0;
+      width: 200%;
+      height: 250px;
+      background: rgba(255,255,255,0.15);
+      top: 0;
+      animation: wave 8s infinite linear;
+    }
+    body::after {
+      top: 120px;
+      animation-duration: 14s;
+      opacity: 0.25;
+    }
+    @keyframes wave {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* HEADER */
+    .site-header {
+      background: rgba(255,255,255,0.3);
+      backdrop-filter: blur(8px);
+      padding: 15px 0;
+      box-shadow: 0 4px 8px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .site-header .brand {
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #d8f3ff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding-bottom: 40px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background-image: url('images/conservation-hero.jpg'); /* Add your conservation-related hero image */
+      background-size: cover;
+      background-position: center;
+      padding: 40px;
+      margin: 40px 0;
+      border-radius: 20px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 20px var(--shadow);
+      animation: fadeIn 1.2s ease;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #e6f7ff;
+      margin: 10px 0 25px;
+    }
+
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--ocean-dark);
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 16px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: var(--ocean-mid);
+      transform: translateY(-3px);
+    }
+
+    /* SECTION CONTENT */
+    .section {
+      background: rgba(255,255,255,0.3);
+      padding: 25px;
+      margin-bottom: 40px;
+      border-radius: 18px;
+      box-shadow: 0 6px 14px var(--shadow);
+      backdrop-filter: blur(8px);
+    }
+
+    .section h3 {
+      font-size: 28px;
+      margin-top: 0;
+      color: #034f76;
+    }
+
+    .section p {
+      font-size: 18px;
+      color: #034f76;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      box-shadow: 0 -4px 10px var(--shadow);
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="brand">BlueGuard Marine Watch</h1>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Marine Sites</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Conservation Initiatives</h2>
+    <p>Explore the efforts dedicated to preserving marine life, restoring habitats, and promoting sustainable practices.</p>
+    <a class="btn" href="#initiatives">Learn More About Conservation Projects</a>
+  </section>
+
+  <!-- Conservation Projects Section -->
+  <section id="initiatives" class="section">
+    <h3>Our Key Conservation Initiatives</h3>
+    <p>We are actively involved in a variety of global and local initiatives to protect our oceans, wildlife, and ecosystems. Below are some of the key areas we focus on:</p>
+
+    <ul>
+      <li><strong>Coral Reef Restoration</strong>: Efforts to restore damaged coral reefs through coral planting and protection.</li>
+      <li><strong>Marine Pollution Cleanup</strong>: Initiatives to reduce plastic and chemical waste in oceans.</li>
+      <li><strong>Marine Protected Areas</strong>: Designating regions as no-go zones for human activity to allow ecosystems to recover.</li>
+      <li><strong>Sustainable Fisheries</strong>: Advocating for sustainable fishing practices to prevent overfishing and preserve marine biodiversity.</li>
+      <li><strong>Wildlife Conservation</strong>: Protecting endangered marine species such as sea turtles, sharks, and whales.</li>
+    </ul>
+
+  </section>
+
+  <!-- Call-to-Action Section -->
+  <section class="section">
+    <h3>Get Involved</h3>
+    <p>Your support is crucial in driving positive change. Whether it's through donations, volunteering, or spreading awareness, every action counts. Help us protect our oceans.</p>
+    <a class="btn" href="contact.html">Join Us in Making a Difference</a>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <small>BlueGuard Marine Watch — SDG 14 Advocacy Project</small>
+    <div class="social-icons">
+      <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

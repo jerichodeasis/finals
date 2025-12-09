@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Marine Conservation Organizations — BlueGuard Marine Watch</title>
+
+  <!-- OCEAN-THEMED INTERNAL CSS -->
+  <style>
+    :root {
+      --ocean-dark: #003f66;
+      --ocean-mid: #0077b6;
+      --ocean-light: #90e0ef;
+      --ocean-soft: #caf0f8;
+      --text-dark: #022b42;
+      --shadow: rgba(0,0,0,0.15);
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #0077b6, #00b4d8, #90e0ef, #caf0f8);
+      background-attachment: fixed;
+      color: var(--text-dark);
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    /* Animated waves */
+    body::before, body::after {
+      content: "";
+      position: fixed;
+      left: 0;
+      width: 200%;
+      height: 250px;
+      background: rgba(255,255,255,0.15);
+      top: 0;
+      animation: wave 8s infinite linear;
+    }
+    body::after {
+      top: 120px;
+      animation-duration: 14s;
+      opacity: 0.25;
+    }
+    @keyframes wave {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* HEADER */
+    .site-header {
+      background: rgba(255,255,255,0.3);
+      backdrop-filter: blur(8px);
+      padding: 15px 0;
+      box-shadow: 0 4px 8px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .site-header .brand {
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #d8f3ff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding-bottom: 40px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background-image: url('images/marine-conservation-hero.jpg'); /* Replace with relevant image */
+      background-size: cover;
+      background-position: center;
+      padding: 40px;
+      margin: 40px 0;
+      border-radius: 20px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 20px var(--shadow);
+      animation: fadeIn 1.2s ease;
+      color: white;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #e6f7ff;
+      margin: 10px 0 25px;
+    }
+
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--ocean-dark);
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 16px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: var(--ocean-mid);
+      transform: translateY(-3px);
+    }
+
+    /* ORGANIZATION LIST */
+    .organization-list {
+      margin-top: 40px;
+    }
+
+    .organization-card {
+      background: rgba(255,255,255,0.3);
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 6px 14px var(--shadow);
+      backdrop-filter: blur(8px);
+      transition: 0.3s;
+      animation: floatUp 1s ease;
+      margin-bottom: 20px;
+    }
+
+    .organization-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+    }
+
+    .organization-card h3 {
+      font-size: 22px;
+      margin-top: 0;
+      color: #034f76;
+    }
+
+    .organization-card p {
+      color: #e6f7ff;
+      font-size: 18px;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      box-shadow: 0 -4px 10px var(--shadow);
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="brand">BlueGuard Marine Watch</h1>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Marine Sites</a>
+      <a href="education.html">Education</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Marine Conservation Organizations</h2>
+    <p>Discover the organizations dedicated to preserving marine ecosystems and learn how you can support their work.</p>
+    <a class="btn" href="#organizations">Learn More About Conservation Groups</a>
+  </section>
+
+  <!-- Organizations List Section -->
+  <section id="organizations" class="organization-list">
+
+    <!-- Organization Card 1 -->
+    <div class="organization-card">
+      <h3>Marine Conservation Society</h3>
+      <p>The Marine Conservation Society is dedicated to protecting the UK’s seas, shores, and wildlife. They work to reduce marine pollution, protect biodiversity, and promote sustainable practices.</p>
+      <a class="btn" href="https://www.mcsuk.org" target="_blank">Visit Website</a>
+    </div>
+
+    <!-- Organization Card 2 -->
+    <div class="organization-card">
+      <h3>Oceana</h3>
+      <p>Oceana is the largest international organization focused solely on ocean conservation. They work to protect and restore the world’s oceans by influencing policy and advocating for marine protection.</p>
+      <a class="btn" href="https://www.oceana.org" target="_blank">Visit Website</a>
+    </div>
+
+    <!-- Organization Card 3 -->
+    <div class="organization-card">
+      <h3>WWF Marine Conservation</h3>
+      <p>WWF’s Marine Program works to protect the oceans and the creatures that live in them, tackling issues like overfishing, habitat destruction, and climate change.</p>
+      <a class="btn" href="https://www.worldwildlife.org/initiatives/oceans" target="_blank">Visit Website</a>
+    </div>
+
+    <!-- Organization Card 4 -->
+    <div class="organization-card">
+      <h3>Surfrider Foundation</h3>
+      <p>The Surfrider Foundation is a non-profit environmental organization that focuses on protecting the world’s oceans, waves, and beaches. They focus on water quality, coastal preservation, and plastic pollution.</p>
+      <a class="btn" href="https://www.surfrider.org" target="_blank">Visit Website</a>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <small>BlueGuard Marine Watch — SDG 14 Advocacy Project</small>
+    <div class="social-icons">
+      <a href="#" title="Facebook"><i class="fab fa-facebook"></i></a>
+      <a href="#" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="#" title="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Accessibility & Community</title>
+  <style>
+
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: linear-gradient(180deg, #08304b, #0a5f7f, #1590c4);
+      color: #e8f7ff;
+    }
+
+    .top-nav {
+      text-align: center;
+      padding: 12px 0;
+      background: rgba(0, 40, 73, 0.75);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+    .top-nav a {
+      color: #bfeaff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      padding: 8px 14px;
+      border-radius: 6px;
+      transition: 0.3s;
+    }
+    .top-nav a:hover {
+      background: rgba(255,255,255,0.15);
+      color: white;
+      box-shadow: 0 0 8px rgba(255,255,255,0.4);
+    }
+
+    .site-header {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #bfeaff;
+      padding: 20px 0 5px;
+      text-shadow: 0 0 10px rgba(0,150,255,0.7);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      padding-bottom: 40px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #bfeaff;
+      text-shadow: 0 0 10px rgba(0,150,255,0.6);
+      margin-bottom: 20px;
+    }
+
+    .section {
+      background: rgba(255,255,255,0.12);
+      padding: 18px;
+      border-radius: 12px;
+      margin-bottom: 25px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 18px rgba(0,0,0,0.3);
+      transition: 0.3s;
+    }
+    .section:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0,150,255,0.35);
+    }
+
+    .image-box {
+      width: 100%;
+      max-width: 800px;
+      height: 350px;
+      object-fit: cover;
+      border-radius: 14px;
+      margin-bottom: 12px;
+      border: 2px solid rgba(255,255,255,0.3);
+      display: block;
+    }
+
+    .info-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      color: #e8f7ff;
+    }
+    .info-table th,
+    .info-table td {
+      padding: 8px;
+      border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    .info-table th {
+      width: 30%;
+      color: #bfeaff;
+      font-weight: bold;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #1aa3ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      margin-top: 10px;
+      transition: 0.3s;
+      box-shadow: 0 0 8px rgba(0,150,255,0.6);
+    }
+    .btn:hover {
+      background: #4ec8ff;
+      box-shadow: 0 0 14px rgba(0,150,255,0.9);
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="top-nav">
+  <a href="index.html">Home</a>
+  <a href="accessibility-table.html">Accessibility</a>
+  <a href="community.html">Community</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<header class="site-header">Accessibility & Community</header>
+
+<main class="container">
+
+  <h2>Accessible Sites & Community Initiatives</h2>
+
+  <div class="section">
+    <h3>Accessible Beach Walkway</h3>
+    <img src="images/nb.png" class="image-box">
+    <table class="info-table">
+      <tr><th>Accessibility Feature</th><td>Wheelchair ramp and tactile paving</td></tr>
+      <tr><th>Community Program</th><td>Beach clean-up volunteer group</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3>Community Center Playground</h3>
+    <img src="images/fgfg.png" class="image-box">
+    <table class="info-table">
+      <tr><th>Accessibility Feature</th><td>Inclusive play equipment for all abilities</td></tr>
+      <tr><th>Community Program</th><td>After-school activities and workshops</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <h3>Urban Garden Project</h3>
+    <img src="images/g5.png" class="image-box">
+    <table class="info-table">
+      <tr><th>Accessibility Feature</th><td>Raised garden beds for wheelchair users</td></tr>
+      <tr><th>Community Program</th><td>Volunteer gardening and sustainability education</td></tr>
+    </table>
+  </div>
+
+  <a class="btn" href="index.html">← Back to Home</a>
+
+</main>
+
+</body>
+</html>

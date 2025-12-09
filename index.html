@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BlueGuard Marine Watch — Home</title>
+
+  <!-- 🌊 INTERNAL OCEAN-THEMED CSS -->
+  <style>
+    :root {
+      --ocean-dark: #003f66;
+      --ocean-mid: #0077b6;
+      --ocean-light: #90e0ef;
+      --ocean-soft: #caf0f8;
+      --text-dark: #022b42;
+      --shadow: rgba(0,0,0,0.15);
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(180deg, #0077b6, #00b4d8, #90e0ef, #caf0f8);
+      background-attachment: fixed;
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
+    /* 🌊 animated waves */
+    body::before, body::after {
+      content: "";
+      position: fixed;
+      left: 0;
+      width: 200%;
+      height: 250px;
+      background: rgba(255,255,255,0.15);
+      top: 0;
+      animation: wave 8s infinite linear;
+    }
+    body::after {
+      top: 120px;
+      animation-duration: 14s;
+      opacity: 0.25;
+    }
+    @keyframes wave {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    /* HEADER */
+    .site-header {
+      background: rgba(255,255,255,0.3);
+      backdrop-filter: blur(8px);
+      padding: 15px 0;
+      box-shadow: 0 4px 8px var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .site-header .brand {
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+      transition: 0.3s;
+    }
+    nav a:hover {
+      color: #d8f3ff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+      padding-bottom: 40px;
+    }
+
+    /* HERO SECTION */
+    .hero {
+      background: rgba(255,255,255,0.2);
+      padding: 40px;
+      margin: 40px 0;
+      border-radius: 20px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 20px var(--shadow);
+      animation: fadeIn 1.2s ease;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      color: white;
+      text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+    }
+
+    .hero p {
+      font-size: 18px;
+      color: #e6f7ff;
+      margin: 10px 0 25px;
+    }
+
+    /* BUTTON */
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      background: var(--ocean-dark);
+      color: white;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 16px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+      transition: 0.3s;
+    }
+    .btn:hover {
+      background: var(--ocean-mid);
+      transform: translateY(-3px);
+    }
+
+    /* FEATURE CARDS */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    article {
+      background: rgba(255,255,255,0.3);
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 6px 14px var(--shadow);
+      backdrop-filter: blur(8px);
+      transition: 0.3s;
+      animation: floatUp 1s ease;
+    }
+
+    article:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+    }
+
+    article h3 {
+      font-size: 22px;
+      margin-top: 0;
+      color: #034f76;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      background: rgba(0,0,0,0.2);
+      backdrop-filter: blur(10px);
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+      box-shadow: 0 -4px 10px var(--shadow);
+    }
+
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+	/* Mobile-friendly adjustments */
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Smaller columns on mobile */
+  }
+  article h3 {
+    font-size: 18px; /* Reduce heading size for small screens */
+  }
+  article p {
+    font-size: 14px; /* Adjust paragraph size for better readability */
+  }
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  width: 100%; /* Ensure it takes full width */
+  max-width: 800px; /* You can adjust this depending on your preference */
+  padding-top: 20px; /* Optional: Add spacing from the top */
+}
+
+.video-box {
+  width: 100%;  /* Ensure the video takes full width of the container */
+  height: auto;
+  max-width: 800px; /* Optional: To limit video size */
+}
+
+
+  </style>
+
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <h1 class="brand">BlueGuard Marine Watch</h1>
+    <nav aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="destinations.html">Marine Sites</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+
+  <section class="hero">
+    <h2>Protecting Life Below Water</h2>
+    <p>Explore marine sites, learn about ocean threats, and discover how you can help protect underwater ecosystems.</p>
+    <a class="btn" href="destinations.html">Explore Marine Sites</a>
+  </section>
+
+  <section class="features grid">
+
+    <article>
+      <h3>Marine Site Explorer</h3>
+      <p>Filter and explore marine locations with details on biodiversity, threats, and conservation status.</p>
+      <a class="btn" href="filter-table.html">Open Marine Table & Photos</a>
+    </article>
+
+    <article>
+      <h3>Accessibility & Community</h3>
+      <p>Explore community-led marine education centers and see accessible programs that support sustainable oceans.</p>
+      <a class="btn" href="accessibility-table.html">View Accessibility Photos</a>
+    </article>
+
+    <article>
+      <h3>Local Impact</h3>
+      <p>See how community programs help reduce pollution and restore marine habitats.</p>
+      <a class="btn" href="local-impact.html">View Local Impact Photos</a>
+    </article>
+	
+  <article>
+    <h3>Conservation Initiatives</h3>
+    <p>Learn about local and international efforts to protect marine ecosystems and promote sustainable practices.</p>
+    <a class="btn" href="conservation-initiatives.html">Explore Conservation Projects</a>
+  </article>
+
+  <article>
+    <h3>Marine Wildlife</h3>
+    <p>Discover the diverse species that inhabit our oceans and the importance of protecting marine biodiversity.</p>
+    <a class="btn" href="wildlife.html">Explore Marine Wildlife</a>
+  </article>
+
+  <article>
+    <h3>Educational Resources</h3>
+    <p>Access educational materials, videos, and guides on ocean conservation for schools, communities, and individuals.</p>
+    <a class="btn" href="resources.html">View Educational Resources</a>
+  </article>
+
+  </section>
+  <div class="video-container">
+  <video class="video-box" controls>
+    <source src="video/ProtectingLifeBelowWater.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+ 
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <small>BlueGuard Marine Watch — SDG 14 Advocacy Project</small>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
